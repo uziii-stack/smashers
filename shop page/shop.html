@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Smashersports</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="../js/main.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar custom-topbar-fixed">
+        <div class="top-bar-inner">
+            <div class="top-left">
+                <span class="top-bar-text">Welcome to Smashersports.</span>
+                <div class="language-dropdown">
+                    <img src="../assets/images/en.jpg" alt="English" class="flag-icon">
+                    <span>English</span>
+                    <i class="fa fa-angle-down"></i>
+                </div>
+                <div class="top-bar-links">
+                    <a href="#">Help</a>
+                    <span class="separator">|</span>
+                    <a href="#">FAQ</a>
+                    <span class="separator">|</span>
+                    <a href="#" class="icon-link"><i class="fa fa-envelope"></i> Newsletter</a>
+                </div>
+            </div>
+            <div class="top-right">
+                <div class="account-links">
+                    <a href="#">Login</a>
+                    <span class="separator">|</span>
+                    <a href="#">My Account</a>
+                    <span class="separator">|</span>
+                    <a href="#">Wishlist</a>
+                </div>
+                <div class="separator-vertical"></div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-vimeo-v"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Main Header -->
+    <header class="main-header custom-navbar-fixed">
+        <div class="header-inner">
+            <!-- Top Row: Logo and Actions -->
+            <div class="smasher-header-top">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="https://smashersports.co.uk/wp-content/uploads/2024/01/Moto.png" alt="Smashers Logo"
+                            class="logo-img">
+                    </a>
+                </div>
+
+                <div class="header-actions">
+                    <a href="#" class="search-trigger" aria-label="Search"><i class="fa fa-search"></i></a>
+                    <a href="#" class="cart-trigger" aria-label="Cart">
+                        <i class="fa fa-shopping-bag"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <button id="mobile-menu-btn" aria-label="Open menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Bottom Row: Navigation -->
+            <div class="smasher-header-bottom">
+                <nav class="smasher-nav">
+                    <ul class="smasher-nav-list">
+                        <li class="smasher-nav-item"><a href="#" class="smasher-nav-link">BATS</a></li>
+                        <li class="smasher-nav-item"><a href="#" class="smasher-nav-link">BATTING LEG GUARDS</a></li>
+                        <li class="smasher-nav-item"><a href="#" class="smasher-nav-link">BATTING GLOVES</a></li>
+                        <li class="smasher-nav-item has-dropdown">
+                            <a href="#" class="smasher-nav-link">WICKET KEEPING GEAR <i
+                                    class="fa fa-angle-down"></i></a>
+                        </li>
+                        <li class="smasher-nav-item"><a href="#" class="smasher-nav-link">PROTECTIVE GEAR</a></li>
+                        <li class="smasher-nav-item"><a href="#" class="smasher-nav-link">BAGS</a></li>
+                        <li class="smasher-nav-item"><a href="#" class="smasher-nav-link">SPONSORSHIP</a></li>
+                        <li class="smasher-nav-item"><a href="#" class="smasher-nav-link">CONTACT US</a></li>
+                        <li class="smasher-nav-item"><a href="shop.html" class="smasher-nav-link">SHOP</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- Mobile Sidebar Overlay -->
+    <div id="mobile-menu-overlay"></div>
+
+    <!-- Mobile Sidebar -->
+    <div id="mobile-sidebar">
+        <button id="mobile-menu-close" aria-label="Close menu">&times;</button>
+        <ul class="mobile-nav-list">
+            <li><a href="../index.html">HOME <i class="fa fa-angle-right"></i></a></li>
+            <li><a href="#">BATS <i class="fa fa-angle-right"></i></a></li>
+            <li><a href="#">BATTING LEG GUARDS <i class="fa fa-angle-right"></i></a></li>
+            <li><a href="#">BATTING GLOVES <i class="fa fa-angle-right"></i></a></li>
+            <li><a href="#">WICKET KEEPING GEAR <i class="fa fa-angle-right"></i></a></li>
+            <li><a href="#">PROTECTIVE GEAR <i class="fa fa-angle-right"></i></a></li>
+            <li><a href="#">BAGS <i class="fa fa-angle-right"></i></a></li>
+            <li><a href="#">SPONSORSHIP <i class="fa fa-angle-right"></i></a></li>
+            <li><a href="#">CONTACT US <i class="fa fa-angle-right"></i></a></li>
+            <li><a href="shop.html">SHOP <i class="fa fa-angle-right"></i></a></li>
+        </ul>
+    </div>
+
+
+    <!-- Main Content Start (Between Navbar and Footer) -->
+    <main class="shop-page">
+        <!-- Hero Carousel Section -->
+        <!-- Hero Section (Premium Slider from Index) -->
+        <section class="hero-slider">
+            <div class="slider-wrapper">
+                <!-- Slide 1: Premium Bats -->
+                <div id="qodef-home-shop-1" class="slide active"
+                    style="background-image: url('https://i.pinimg.com/1200x/77/50/e8/7750e81a3b42bbc2d13c162eb47c9860.jpg');">
+                    <div class="slide-overlay"></div>
+                    <div class="slide-content">
+                        <div class="slide-text-wrapper">
+                            <h1 class="slide-title-large">Elite Bats.</h1>
+                            <p class="slide-subtitle-text">Experience the power of handcrafted English Willow.
+                                Engineered
+                                for boundaries.</p>
+                        </div>
+                        <a href="#" class="btn btn-primary slide-btn">Shop Bats</a>
+                    </div>
+                </div>
+                <!-- Slide 2: Professional Gloves -->
+                <div id="qodef-home-shop-2" class="slide"
+                    style="background-image: url('https://i.pinimg.com/1200x/77/50/e8/7750e81a3b42bbc2d13c162eb47c9860.jpg');">
+                    <div class="slide-overlay"></div>
+                    <div class="slide-content">
+                        <div class="slide-text-wrapper">
+                            <h1 class="slide-title-large">Pro Protection.</h1>
+                            <p class="slide-subtitle-text">Ultimate comfort and impact protection. Our latest glove
+                                collection is here.</p>
+                        </div>
+                        <a href="#" class="btn btn-primary slide-btn">Shop Gloves</a>
+                    </div>
+                </div>
+                <!-- Slide 3: Full Equipment -->
+                <div id="qodef-home-shop-3" class="slide"
+                    style="background-image: url('https://i.pinimg.com/1200x/77/50/e8/7750e81a3b42bbc2d13c162eb47c9860.jpg');">
+                    <div class="slide-overlay"></div>
+                    <div class="slide-content">
+                        <div class="slide-text-wrapper">
+                            <h1 class="slide-title-large">Game Ready.</h1>
+                            <p class="slide-subtitle-text">Complete your kit with premium protective gear and
+                                accessories.
+                            </p>
+                        </div>
+                        <a href="#" class="btn btn-primary slide-btn">View All Gear</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Arrows Removed -->
+
+            <!-- Pagination Dots -->
+            <div class="slider-dots">
+                <span class="dot active" data-target="#qodef-home-shop-1" data-index="0"></span>
+                <span class="dot" data-target="#qodef-home-shop-2" data-index="1"></span>
+                <span class="dot" data-target="#qodef-home-shop-3" data-index="2"></span>
+            </div>
+        </section>
+
+        <!-- Shop Interface Container -->
+        <div id="shop" class="shop-container">
+            <!-- Sidebar -->
+            <aside class="shop-sidebar">
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">EQUIPMENT</h3>
+                    <ul class="category-list">
+                        <li><a href="#" class="active" data-category="all">All Equipment</a></li>
+                        <li><a href="#" data-category="bats">Cricket Bats</a></li>
+                        <li><a href="#" data-category="balls">Cricket Balls</a></li>
+                        <li><a href="#" data-category="protection">Protective Gear</a></li>
+                        <li><a href="#" data-category="accessories">Bags & Accessories</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">FILTER BY PRICE</h3>
+                    <div class="price-slider-container">
+                        <input type="range" min="0" max="1000" value="1000" class="price-slider" id="priceRange">
+                        <div class="price-range-text">
+                            Price: $0 — $<span id="priceValue">1000</span>
+                        </div>
+                        <button class="filter-btn">FILTER</button>
+                    </div>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">FEATURED GEAR</h3>
+                    <ul class="mini-product-list">
+                        <li class="mini-product">
+                            <div class="mini-img-placeholder"></div>
+                            <div class="mini-info">
+                                <span class="mini-title">Grade 1 Willow Bat</span>
+                                <span class="mini-price">$450.00</span>
+                            </div>
+                        </li>
+                        <li class="mini-product">
+                            <div class="mini-img-placeholder"></div>
+                            <div class="mini-info">
+                                <span class="mini-title">Leather Match Ball</span>
+                                <span class="mini-price">$35.00</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Main Shop Content -->
+            <div class="shop-main">
+                <!-- Top Bar -->
+                <div class="shop-top-bar">
+                    <p class="results-count">Showing 1–12 of 36 results</p>
+                    <div class="sort-dropdown">
+                        <button class="sort-toggle" id="sortToggle">Default sorting <span
+                                class="arrow">▼</span></button>
+                        <ul class="sort-options" id="sortOptions">
+                            <li><a href="#">Default sorting</a></li>
+                            <li><a href="#">Sort by popularity</a></li>
+                            <li><a href="#">Sort by average rating</a></li>
+                            <li><a href="#">Sort by latest</a></li>
+                            <li><a href="#">Sort by price: low to high</a></li>
+                            <li><a href="#">Sort by price: high to low</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Product Grid -->
+                <section class="product-grid" id="productGrid">
+                    <!-- Products -->
+                    <div class="product-card sale">
+                        <div class="product-image-wrapper">
+                            <span class="badge sale-badge">SALE</span>
+                            <div class="product-img"><img
+                                    src="https://smashersports.co.uk/wp-content/uploads/2023/01/2.png"
+                                    alt="Premium Willow Bat" onerror="this.parentElement.classList.add('placeholder')">
+                            </div>
+                            <div class="product-hover-overlay">
+                                <button class="add-to-cart-btn">ADD TO CART</button>
+                                <div class="quick-icons">
+                                    <span class="icon">♡</span>
+                                    <span class="icon">👁</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Premium Willow Bat</h3>
+                            <div class="product-price">
+                                <span class="old-price">$550.00</span>
+                                <span class="price">$450.00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image-wrapper">
+                            <div class="product-img"><img
+                                    src="https://smashersports.co.uk/wp-content/uploads/2023/01/3.png"
+                                    alt="Professional Leather Ball"
+                                    onerror="this.parentElement.classList.add('placeholder')"></div>
+                            <div class="product-hover-overlay">
+                                <button class="add-to-cart-btn">ADD TO CART</button>
+                                <div class="quick-icons">
+                                    <span class="icon">♡</span>
+                                    <span class="icon">👁</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Professional Leather Ball</h3>
+                            <div class="product-price">
+                                <span class="price">$35.00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card new">
+                        <div class="product-image-wrapper">
+                            <span class="badge new-badge">NEW</span>
+                            <div class="product-img"><img
+                                    src="https://smashersports.co.uk/wp-content/uploads/2023/01/4.png"
+                                    alt="Pro-Grade Batting Gloves"
+                                    onerror="this.parentElement.classList.add('placeholder')"></div>
+                            <div class="product-hover-overlay">
+                                <button class="add-to-cart-btn">ADD TO CART</button>
+                                <div class="quick-icons">
+                                    <span class="icon">♡</span>
+                                    <span class="icon">👁</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Pro-Grade Batting Gloves</h3>
+                            <div class="product-price">
+                                <span class="price">$75.00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image-wrapper">
+                            <div class="product-img"><img
+                                    src="https://smashersports.co.uk/wp-content/uploads/2023/03/MG_9253-copy-1.jpg"
+                                    alt="Lightweight Batting Pads"
+                                    onerror="this.parentElement.classList.add('placeholder')"></div>
+                            <div class="product-hover-overlay"><button class="add-to-cart-btn">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Lightweight Batting Pads</h3>
+                            <div class="product-price"><span class="price">$110.00</span></div>
+                        </div>
+                    </div>
+
+                    <div class="product-card sale">
+                        <div class="product-image-wrapper">
+                            <span class="badge sale-badge">SALE</span>
+                            <div class="product-img"><img
+                                    src="https://smashersports.co.uk/wp-content/uploads/2023/01/5.png"
+                                    alt="High-Impact Safety Helmet"
+                                    onerror="this.parentElement.classList.add('placeholder')"></div>
+                            <div class="product-hover-overlay"><button class="add-to-cart-btn">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">High-Impact Safety Helmet</h3>
+                            <div class="product-price"><span class="old-price">$180.00</span><span
+                                    class="price">$145.00</span></div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image-wrapper">
+                            <div class="product-img"><img
+                                    src="https://smashersports.co.uk/wp-content/uploads/2023/01/2.png"
+                                    alt="Elite Wheelie Kit Bag"
+                                    onerror="this.parentElement.classList.add('placeholder')">
+                            </div>
+                            <div class="product-hover-overlay"><button class="add-to-cart-btn">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Elite Wheelie Kit Bag</h3>
+                            <div class="product-price"><span class="price">$195.00</span></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Pagination -->
+                <nav class="pagination">
+                    <ul class="pagination-list">
+                        <li><a href="#" class="prev disabled">← PREV</a></li>
+                        <li><a href="#" class="page-num active">1</a></li>
+                        <li><a href="#" class="page-num">2</a></li>
+                        <li><a href="#" class="page-num">3</a></li>
+                        <li><a href="#" class="next">NEXT →</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </main>
+    <!-- Main Content End -->
+
+    <!-- Trust / USP Section -->
+    <section class="trust-section">
+        <div class="container">
+            <div class="trust-grid">
+                <!-- Column 1: Fast Delivery -->
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i class="fa fa-truck"></i>
+                    </div>
+                    <h3 class="trust-heading">Fast & Secure Delivery</h3>
+                    <p class="trust-description">Nationwide shipping with tracking</p>
+                </div>
+
+                <!-- Column 2: Expert Support -->
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i class="fa fa-phone"></i>
+                    </div>
+                    <h3 class="trust-heading">Cricket Gear Experts On Call</h3>
+                    <p class="trust-description">Professional guidance available</p>
+                </div>
+
+                <!-- Column 3: Rewards -->
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i class="fa fa-gift"></i>
+                    </div>
+                    <h3 class="trust-heading">Earn Rewards On Every Purchase</h3>
+                    <p class="trust-description">Join our loyalty program</p>
+                </div>
+
+                <!-- Column 4: Trusted -->
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i class="fa fa-shield"></i>
+                    </div>
+                    <h3 class="trust-heading">Trusted By Competitive Players</h3>
+                    <p class="trust-description">Quality gear for champions</p>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="container">
+                <div class="smasher-footer-grid">
+                    <!-- Left Section: Branding & Links -->
+                    <div class="smasher-footer-left">
+                        <div class="footer-branding">
+                            <img src="https://smashersports.co.uk/wp-content/uploads/2024/01/Moto.png"
+                                alt="Smashers Logo" class="footer-logo">
+                            <p class="footer-tagline">Premium Cricket Gear for Professional Players.</p>
+                            <h4 class="footer-social-title">Follow Us</h4>
+                            <div class="smasher-footer-social">
+                                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="footer-links-group">
+                            <!-- Col 1: General -->
+                            <div class="footer-col">
+                                <div class="footer-accordion-header">
+                                    <h3 class="footer-widget-title">General</h3>
+                                    <i class="fas fa-plus footer-toggle"></i>
+                                </div>
+                                <ul class="footer-links footer-accordion-content">
+                                    <li><a href="#">My Account</a></li>
+                                    <li><a href="#">Delivery & Returns</a></li>
+                                    <li><a href="#">Bat Repairs</a></li>
+                                    <li><a href="#">Size Guides</a></li>
+                                    <li><a href="#">Declarations of Conformity</a></li>
+                                    <li><a href="#">Pay in 3 with Klarna</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Col 2: Smashers -->
+                            <div class="footer-col">
+                                <div class="footer-accordion-header">
+                                    <h3 class="footer-widget-title">Smashers Sports</h3>
+                                    <i class="fas fa-plus footer-toggle"></i>
+                                </div>
+                                <ul class="footer-links footer-accordion-content">
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Careers</a></li>
+                                    <li><a href="#">Help</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="#">Store Locator</a></li>
+                                    <li><a href="#">Become a Willow Grower</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Section: Newsletter -->
+                    <div class="smasher-footer-right">
+                        <div class="footer-col">
+                            <h3 class="footer-widget-title">Newsletter</h3>
+                            <p class="newsletter-desc">Get 10% off your first purchase and be the first to know about
+                                new
+                                products and technology.</p>
+                            <form class="newsletter-form">
+                                <div class="newsletter-input-group">
+                                    <input type="email" placeholder="Email Address" required>
+                                    <button type="submit" class="newsletter-btn">Sign up</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-divider"></div>
+
+                <div class="footer-bottom-row">
+                    <div class="footer-bottom-left">
+                        <span class="shop-to-text">Shop to:</span>
+                        <div class="location-selector">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>United Kingdom</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <span class="copyright-text">© 2026 <a href="#">Smashers Sports</a>. All rights reserved.</span>
+                    </div>
+                    <div class="footer-bottom-right">
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-amex" style="color: #006fcf;"></i>
+                            <i class="fab fa-apple-pay" style="color: #000;"></i>
+                            <i class="fab fa-cc-diners-club" style="color: #0079be;"></i>
+                            <i class="fab fa-cc-discover" style="color: #e55c00;"></i>
+                            <i class="fab fa-google-pay" style="color: #000;"></i>
+                            <i class="fab fa-cc-jcb" style="color: #008000;"></i>
+                            <i class="fab fa-cc-mastercard" style="color: #eb001b;"></i>
+                            <i class="fab fa-cc-visa" style="color: #1a1f71;"></i>
+                            <span class="klarna-icon" style="font-weight:bold; color:#ffb3c7;">Klarna.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-legal-links">
+                    <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a> | <a href="#">Refund Policy</a>
+                    | <a href="#">Modern Slavery</a> | <a href="#">Anti-Bribery Policy</a>
+                </div>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+</body>
+
+</html>
