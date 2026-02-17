@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Smashersports</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@0,400;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/main.js" defer></script>
+  <style>
+    /* Inline styles for specific About Page elements not in style.css yet */
+
+
+    /* Craftsmanship Section Styles */
+    .craftsmanship-section {
+      padding: 100px 0;
+      background-color: #fff;
+    }
+
+    .craftsmanship-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      grid-template-areas: "content image";
+    }
+
+    .craftsmanship-grid.reversed {
+      grid-template-areas: "image content";
+    }
+
+    .craftsmanship-content {
+      grid-area: content;
+    }
+
+    .craftsmanship-image {
+      grid-area: image;
+      width: 100%;
+      height: 480px;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    .craftsmanship-content h2 {
+      font-size: 36px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+      color: #000;
+      letter-spacing: 1px;
+    }
+
+    .craftsmanship-content p {
+      font-family: var(--font-primary);
+      font-size: 16px;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 25px;
+    }
+
+
+    .craftsmanship-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    @media (max-width: 991px) {
+
+      .craftsmanship-grid,
+      .craftsmanship-grid.reversed {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "content"
+          "image";
+        gap: 40px;
+      }
+
+      .craftsmanship-image {
+        height: 350px;
+      }
+
+      .craftsmanship-content h2 {
+        font-size: 28px;
+      }
+    }
+
+    /* Footer Breadcrumb Styles */
+    .bottom-breadcrumb-section {
+      padding: 20px 0;
+      border-top: 1px solid #eee;
+      background-color: #fff;
+    }
+
+    .bottom-breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-primary);
+      font-size: 14px;
+      color: #333;
+    }
+
+    .bottom-breadcrumb a {
+      text-decoration: none;
+      color: #666;
+      transition: color 0.3s;
+    }
+
+    .bottom-breadcrumb a:hover {
+      color: #000;
+    }
+
+    .bottom-breadcrumb span.separator {
+      color: #999;
+      font-size: 12px;
+    }
+
+    .bottom-breadcrumb span.current {
+      font-weight: 500;
+      color: #333;
+    }
+
+    /* Local Values Section Styles (Mirrored from index.html trust-section) */
+    .about-values-section {
+      padding: 30px 0;
+      background-color: #f9f9f9;
+      border-top: 1px solid #eee;
+    }
+
+    .about-values-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      text-align: center;
+    }
+
+    .about-values-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      padding: 20px;
+    }
+
+    .about-values-icon {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #fff;
+      border-radius: 50%;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .about-values-icon i {
+      font-size: 22px;
+      color: #000080;
+    }
+
+    .about-values-heading {
+      font-family: var(--font-heading);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--color-heading);
+      margin: 0;
+    }
+
+    .about-values-description {
+      font-family: var(--font-primary);
+      font-size: 11px;
+      color: #8e8e8e;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    @media (max-width: 991px) {
+      .about-values-grid {
+        display: flex !important;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 15px;
+        padding: 10px 20px 25px;
+        margin: 0 -20px;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        -webkit-overflow-scrolling: touch;
+        cursor: grab;
+      }
+
+      .about-values-grid::-webkit-scrollbar {
+        display: none;
+      }
+
+      .about-values-grid:active {
+        cursor: grabbing;
+      }
+
+      .about-values-item {
+        flex: 0 0 60%;
+        background: #fff;
+        padding: 20px 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      }
+    }
+
+    @media (max-width: 575px) {
+      .about-values-item {
+        flex: 0 0 60%;
+        /* Same as tablet per index.html logic */
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+
+  <!-- Main Header -->
+  <header class="main-header custom-navbar-fixed">
+    <div class="header-inner">
+      <!-- Desktop Header Layout -->
+      <div class="header-desktop">
+        <div class="smasher-header-top">
+          <div class="logo">
+            <a href="../index.html">
+              <img src="https://smashersports.co.uk/wp-content/uploads/2024/01/Moto.png" alt="Smashers Logo"
+                class="logo-img">
+            </a>
+          </div>
+          <div class="header-actions">
+            <div class="search-box">
+              <input type="text" class="search-input" placeholder="Search products..">
+              <button class="search-btn" aria-label="Search">
+                <i class="fa fa-search"></i>
+              </button>
+            </div>
+            <a href="#" class="wishlist-trigger" aria-label="Wishlist">
+              <i class="fa-regular fa-heart"></i>
+              <span class="wishlist-count">0</span>
+            </a>
+            <a href="#" class="navbar-login-link">LOG IN</a>
+            <a href="#" class="cart-trigger" aria-label="Cart">
+              <i class="fa-shopping-bag fa"></i>
+              <span class="cart-count">0</span>
+            </a>
+          </div>
+        </div>
+        <div class="smasher-header-bottom">
+          <nav class="smasher-nav">
+            <ul class="smasher-nav-list">
+              <li class="smasher-nav-item"><a href="#" class="smasher-nav-link">BATS</a></li>
+              <li class="smasher-nav-item"><a href="#" class="smasher-nav-link">BATTING LEG GUARDS</a>
+              </li>
+              <li class="smasher-nav-item"><a href="#" class="smasher-nav-link">BATTING GLOVES</a></li>
+              <li class="smasher-nav-item has-dropdown">
+                <a href="#" class="smasher-nav-link">WICKET KEEPING GEAR <i class="fa fa-angle-down"></i></a>
+              </li>
+              <li class="smasher-nav-item"><a href="#" class="smasher-nav-link">PROTECTIVE GEAR</a></li>
+              <li class="smasher-nav-item"><a href="#" class="smasher-nav-link">BAGS</a></li>
+              <li class="smasher-nav-item"><a href="#" class="smasher-nav-link">SPONSORSHIP</a></li>
+              <li class="smasher-nav-item"><a href="#" class="smasher-nav-link">CONTACT US</a></li>
+              <li class="smasher-nav-item"><a href="../shop page/shop.html" class="smasher-nav-link">SHOP</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Mobile Header Layout -->
+      <div class="header-mobile">
+        <div class="mobile-header-inner">
+          <button id="mobile-menu-btn" class="mobile-hamburger" aria-label="Open menu">
+            <i class="fa fa-bars"></i>
+          </button>
+          <div class="mobile-logo">
+            <a href="../index.html">
+              <img src="https://smashersports.co.uk/wp-content/uploads/2024/01/Moto.png" alt="Smashers Logo"
+                class="logo-img">
+            </a>
+          </div>
+          <div class="mobile-actions">
+            <button class="mobile-action-btn mobile-search-trigger" aria-label="Search">
+              <i class="fa fa-search"></i>
+            </button>
+            <a href="#" class="mobile-action-btn mobile-wishlist" aria-label="Wishlist">
+              <i class="fa-regular fa-heart"></i>
+              <span class="wishlist-count">0</span>
+            </a>
+            <a href="#" class="mobile-action-btn mobile-cart" aria-label="Cart">
+              <i class="fa fa-shopping-bag"></i>
+              <span class="cart-count">0</span>
+            </a>
+          </div>
+        </div>
+        <!-- Mobile Search Overlay -->
+        <div class="mobile-search-bar" id="mobile-search-bar">
+          <div class="mobile-search-inner">
+            <input type="text" class="mobile-search-input" placeholder="Search for products...">
+            <button class="mobile-search-close" id="mobile-search-close">
+              <i class="fa fa-times"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- Mobile Sidebar Overlay -->
+  <div id="mobile-menu-overlay"></div>
+
+  <!-- Mobile Sidebar -->
+  <div id="mobile-sidebar">
+    <button id="mobile-menu-close" aria-label="Close menu">&times;</button>
+    <ul class="mobile-nav-list">
+      <li><a href="../index.html">HOME <i class="fa fa-angle-right"></i></a></li>
+      <li><a href="#">BATS <i class="fa fa-angle-right"></i></a></li>
+      <li><a href="#">BATTING LEG GUARDS <i class="fa fa-angle-right"></i></a></li>
+      <li><a href="#">BATTING GLOVES <i class="fa fa-angle-right"></i></a></li>
+      <li><a href="#">WICKET KEEPING GEAR <i class="fa fa-angle-right"></i></a></li>
+      <li><a href="#">PROTECTIVE GEAR <i class="fa fa-angle-right"></i></a></li>
+      <li><a href="#">BAGS <i class="fa fa-angle-right"></i></a></li>
+      <li><a href="#">SPONSORSHIP <i class="fa fa-angle-right"></i></a></li>
+      <li><a href="#">CONTACT US <i class="fa fa-angle-right"></i></a></li>
+      <li><a href="../shop page/shop.html">SHOP <i class="fa fa-angle-right"></i></a></li>
+    </ul>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- Hero Section -->
+    <!-- Minimalist Intro Section -->
+    <section class="about-intro" style="padding: 120px 0; background-color: #fff; text-align: center;">
+      <div class="container">
+
+        <!-- Content -->
+        <div class="intro-content" style="max-width: 900px; margin: 0 auto;">
+          <h6
+            style="font-family: var(--font-primary); font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #666; margin-bottom: 25px;">
+            Empowering Your Game With Quality Cricket Gear
+          </h6>
+          <h1
+            style="font-family: var(--font-heading); font-size: 42px; line-height: 1.3; font-weight: 400; color: #000; text-transform: uppercase; margin-bottom: 40px;">
+            Passionate about performance and dedicated to innovation, we create equipment that defines champions.
+          </h1>
+          <a href="../shop page/shop.html" class="btn btn-primary"
+            style="background-color: #000; padding: 15px 40px; font-size: 14px; letter-spacing: 1px;">Explore
+            Products</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Performance & Design Section (Images + 3 Col Text) -->
+    <section class="performance-section" style="padding: 0 0 100px 0;">
+      <div class="container">
+        <!-- Image Row -->
+        <div class="performance-images"
+          style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 60px;">
+          <img src="https://smashersports.co.uk/wp-content/uploads/2023/01/5.png" alt="Cricketer preparing"
+            style="width: 100%; height: 400px; object-fit: cover; border-radius: 12px;">
+          <img src="https://smashersports.co.uk/wp-content/uploads/2023/01/2.png" alt="Cricket action"
+            style="width: 100%; height: 400px; object-fit: cover; border-radius: 12px;">
+        </div>
+
+        <!-- Text Row -->
+        <div class="performance-text"
+          style="display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 40px; align-items: start;">
+          <!-- Column 1: Heading -->
+          <div>
+            <h2
+              style="font-family: var(--font-heading); font-size: 36px; line-height: 1.2; color: #000; text-transform: uppercase; margin: 0;">
+              CRAFTED FOR THE CREASE,<br>DESIGNED FOR YOU
+            </h2>
+          </div>
+
+          <!-- Column 2: Text -->
+          <div>
+            <p style="font-family: var(--font-primary); font-size: 15px; line-height: 1.8; color: #555; margin: 0;">
+              We believe that every detail matters. From the grade of our English Willow to the density of our impact
+              foam, our equipment is engineered to keep up with you—whether you're facing pace or spin. Crafted with
+              high-quality materials and advanced ergonomics.
+            </p>
+          </div>
+
+          <!-- Column 3: Text -->
+          <div>
+            <p style="font-family: var(--font-primary); font-size: 15px; line-height: 1.8; color: #555; margin: 0;">
+              Each piece is designed to enhance your experience, whether you're in the nets or out in the middle. Our
+              gear isn't just functional; it's a part of your journey, providing the protection and freedom you need to
+              perform at your absolute best.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Company Story Section -->
+    <section class="section">
+      <div class="container">
+
+        <div class="mixed-columns"
+          style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+          <div style="text-align: left;">
+            <h6 class="section-subtitle">Who We Are</h6>
+            <h2 class="premium-section-title">Twenty Years. One Obsession.</h2>
+            <p style="margin-bottom: 20px; line-height: 1.8; ">
+              CricketPro Gear started on a simple premise: the equipment available to club cricketers, academy players,
+              and semi-professionals simply wasn't good enough. The bats cracked after one season. The bags fell apart
+              in the rain. We decided to fix that.
+            </p>
+            <p style="margin-bottom: 20px; line-height: 1.8; ">
+              From our first workshop in 2004, we focused on materials science, real field testing, and the kind of
+              honest feedback that only comes from players who train every day.
+            </p>
+          </div>
+          <div>
+            <img src="https://smashersports.co.uk/wp-content/uploads/2023/01/5.png" alt="Workshop"
+              style="width: 100%; border-radius: 4px;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="about-values-section">
+      <div class="container">
+        <div class="section-header" style="text-align: center; margin-bottom: 60px;">
+          <h6 class="section-subtitle">What Drives Us</h6>
+          <h2 class="premium-section-title">Principles, Not Promises</h2>
+        </div>
+        <div class="about-values-grid">
+          <!-- Column 1: Innovation -->
+          <div class="about-values-item">
+            <div class="about-values-icon">
+              <i class="fa fa-shield"></i>
+            </div>
+            <h3 class="about-values-heading">Innovation in Protection</h3>
+            <p class="about-values-description">Impact technology that actually absorbs force rather than distributing
+              it.</p>
+          </div>
+
+          <!-- Column 2: Athlete-Driven -->
+          <div class="about-values-item">
+            <div class="about-values-icon">
+              <i class="fa fa-users"></i>
+            </div>
+            <h3 class="about-values-heading">Athlete-Driven Design</h3>
+            <p class="about-values-description">Our design process begins with the player feedback, not the trend
+              report.</p>
+          </div>
+
+          <!-- Column 3: Durability -->
+          <div class="about-values-item">
+            <div class="about-values-icon">
+              <i class="fa fa-hammer"></i>
+            </div>
+            <h3 class="about-values-heading">Durability First</h3>
+            <p class="about-values-description">Built to last a full playing career, not just a season. Integrity under
+              impact.</p>
+          </div>
+
+          <!-- Column 4: Trust -->
+          <div class="about-values-item">
+            <div class="about-values-icon">
+              <i class="fa fa-certificate"></i>
+            </div>
+            <h3 class="about-values-heading">Trusted Since 2004</h3>
+            <p class="about-values-description">Two decades in a demanding sport means nothing if the trust isn't
+              earned.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Craftsmanship Section -->
+    <section class="craftsmanship-section">
+      <div class="container">
+        <div class="craftsmanship-grid">
+          <div class="craftsmanship-content">
+            <h2>THE CRAFTSMANSHIP</h2>
+            <p>
+              One of the great points of difference between Smashersports and other brands is that we source our own
+              premium English Willow directly from the finest plantations. This allows us to have complete control of
+              production from the initial cleft selection to the finished masterpiece. Each blade is seasoned and
+              processed with meticulous care before reaching our master bat-makers.
+            </p>
+            <p>
+              Our master bat-makers lovingly hand-craft every bat in our specialized facilities, combining traditional
+              techniques with modern precision. This dedication ensures our production meets the highest standards of
+              performance and durability, allowing our passionate staff to deliver equipment that meets the varying
+              needs of cricketers across different regions and playing levels.
+            </p>
+          </div>
+          <div class="craftsmanship-image">
+            <img
+              src="https://lh4.googleusercontent.com/proxy/z-ShVH4G7p7KhEPlHH5OAdZ0C0llh3Pq8ahpLDz3aVgWjjd7dcsbgG7ZRdO_uaFP2UBMgpwlvtr-Nu0vKT2FH8mXJAqJ3g"
+              alt="Smashers Master Bat Maker at Work">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Willow Section -->
+    <section class="craftsmanship-section">
+      <div class="container">
+        <div class="craftsmanship-grid reversed">
+          <div class="craftsmanship-content">
+            <h2>THE WILLOW</h2>
+            <p>
+              The 'Salix alba Caerulea' Willow Tree thrives in damp soil and will typically grow around bodies of water.
+              Their extensive root systems and large capacity for water retention mean that they can help manage
+              floodplains by stabilising surrounding soils and preserving nutrient rich topsoils. Their growth rate is
+              considerable and, when managed, allows a Salix Alba to reach maturity in 15-20 years.
+            </p>
+            <p>
+              One intriguing quality of the Salix Alba is its tremendous ability to both capture and store carbon. Its
+              rate of high energy growth is driven through the assimilation of carbon dioxide through photosynthesis,
+              which makes the tree highly effective in the global effort to reduce high concentrations of CO2 in the
+              atmosphere.
+            </p>
+          </div>
+          <div class="craftsmanship-image">
+            <img
+              src="https://lh4.googleusercontent.com/proxy/z-ShVH4G7p7KhEPlHH5OAdZ0C0llh3Pq8ahpLDz3aVgWjjd7dcsbgG7ZRdO_uaFP2UBMgpwlvtr-Nu0vKT2FH8mXJAqJ3g"
+              alt="Salix Alba Willow Plantation">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Bottom Breadcrumb Section -->
+    <section class="bottom-breadcrumb-section">
+      <div class="container">
+        <div class="bottom-breadcrumb">
+          <a href="../index.html">Home</a>
+          <span class="separator"><i class="fa fa-angle-right"></i></span>
+          <span class="current">About Us</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="smasher-footer-grid">
+        <!-- Left Section: Branding & Links -->
+        <div class="smasher-footer-left">
+          <div class="footer-branding">
+            <img src="https://smashersports.co.uk/wp-content/uploads/2024/01/Moto.png" alt="Smashers Logo"
+              class="footer-logo">
+            <p class="footer-tagline">Premium Cricket Gear for Professional Players.</p>
+            <h4 class="footer-social-title">Follow Us</h4>
+            <div class="smasher-footer-social">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+              <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-links-group">
+            <!-- Col 1: General -->
+            <div class="footer-col">
+              <div class="footer-accordion-header">
+                <h3 class="footer-widget-title">General</h3>
+                <i class="fas fa-plus footer-toggle"></i>
+              </div>
+              <ul class="footer-links footer-accordion-content">
+                <li><a href="#">My Account</a></li>
+                <li><a href="#">Delivery & Returns</a></li>
+                <li><a href="#">Bat Repairs</a></li>
+                <li><a href="#">Size Guides</a></li>
+                <li><a href="#">Declarations of Conformity</a></li>
+                <li><a href="#">Pay in 3 with Klarna</a></li>
+              </ul>
+            </div>
+
+            <!-- Col 2: Smashers -->
+            <div class="footer-col">
+              <div class="footer-accordion-header">
+                <h3 class="footer-widget-title">Smashers Sports</h3>
+                <i class="fas fa-plus footer-toggle"></i>
+              </div>
+              <ul class="footer-links footer-accordion-content">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Store Locator</a></li>
+                <li><a href="#">Become a Willow Grower</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Section: Newsletter -->
+        <div class="smasher-footer-right">
+          <div class="footer-col">
+            <h3 class="footer-widget-title">Newsletter</h3>
+            <p class="newsletter-desc">Get 10% off your first purchase and be the first to know about new
+              products and technology.</p>
+            <form class="newsletter-form">
+              <div class="newsletter-input-group">
+                <input type="email" placeholder="Email Address" required>
+                <button type="submit" class="newsletter-btn">Sign up</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom-row">
+        <div class="footer-bottom-left">
+          <span class="shop-to-text">Shop to:</span>
+          <div class="location-selector">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>United Kingdom</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <span class="copyright-text">© 2026 <a href="#">Smashers Sports</a>. All rights reserved.</span>
+        </div>
+        <div class="footer-bottom-right">
+          <div class="payment-icons">
+            <i class="fab fa-cc-amex" style="color: #006fcf;"></i>
+            <i class="fab fa-apple-pay" style="color: #000;"></i>
+            <i class="fab fa-cc-diners-club" style="color: #0079be;"></i>
+            <i class="fab fa-cc-discover" style="color: #e55c00;"></i>
+            <i class="fab fa-google-pay" style="color: #000;"></i>
+            <i class="fab fa-cc-jcb" style="color: #008000;"></i>
+            <i class="fab fa-cc-mastercard" style="color: #eb001b;"></i>
+            <i class="fab fa-cc-visa" style="color: #1a1f71;"></i>
+            <span class="klarna-icon" style="font-weight:bold; color:#ffb3c7;">Klarna.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-legal-links">
+        <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a> | <a href="#">Refund Policy</a>
+        | <a href="#">Modern Slavery</a> | <a href="#">Anti-Bribery Policy</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const valuesGrid = document.querySelector('.about-values-grid');
+      if (valuesGrid) {
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        valuesGrid.addEventListener('mousedown', (e) => {
+          isDown = true;
+          valuesGrid.classList.add('active');
+          startX = e.pageX - valuesGrid.offsetLeft;
+          scrollLeft = valuesGrid.scrollLeft;
+          valuesGrid.style.scrollBehavior = 'auto';
+        });
+
+        valuesGrid.addEventListener('mouseleave', () => {
+          isDown = false;
+          valuesGrid.style.scrollBehavior = 'smooth';
+        });
+
+        valuesGrid.addEventListener('mouseup', () => {
+          isDown = false;
+          valuesGrid.style.scrollBehavior = 'smooth';
+        });
+
+        valuesGrid.addEventListener('mousemove', (e) => {
+          if (!isDown) return;
+          e.preventDefault();
+          const x = e.pageX - valuesGrid.offsetLeft;
+          const walk = (x - startX) * 2;
+          valuesGrid.scrollLeft = scrollLeft - walk;
+        });
+
+        // Touch events for mobile
+        valuesGrid.addEventListener('touchstart', (e) => {
+          isDown = true;
+          startX = e.touches[0].pageX - valuesGrid.offsetLeft;
+          scrollLeft = valuesGrid.scrollLeft;
+          valuesGrid.style.scrollBehavior = 'auto';
+        }, { passive: true });
+
+        valuesGrid.addEventListener('touchend', () => {
+          isDown = false;
+          valuesGrid.style.scrollBehavior = 'smooth';
+        });
+
+        valuesGrid.addEventListener('touchmove', (e) => {
+          if (!isDown) return;
+          const x = e.touches[0].pageX - valuesGrid.offsetLeft;
+          const walk = (x - startX) * 1.5;
+          valuesGrid.scrollLeft = scrollLeft - walk;
+        }, { passive: true });
+      }
+    });
+  </script>
+</body>
+
+</html>
